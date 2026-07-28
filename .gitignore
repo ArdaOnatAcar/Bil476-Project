@@ -6,7 +6,7 @@ kaggle.json
 data/*.csv
 data/models/
 
-# Generated figures
+# Generated figures (except the ones the report embeds — see exceptions below)
 figures/*.png
 
 # Jupyter
@@ -25,3 +25,24 @@ Thumbs.db
 
 # Keep placeholder/tracked files despite the rules above
 !data/README.md
+
+# Keep the figures the report embeds, so Bil476_Report.tex compiles from a fresh clone
+!figures/class_distribution.png
+!figures/correlation_heatmap.png
+!figures/binary_feature_prevalence.png
+!figures/continuous_feature_distributions.png
+!figures/ordinal_feature_distributions.png
+!figures/continuous_by_target.png
+!figures/roc_curves_comparison.png
+!figures/confusion_matrix_lightgbm_original_tuned.png
+
+# LaTeX build artifacts (the report .tex/.pdf themselves are tracked)
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
