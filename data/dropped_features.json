@@ -1,0 +1,111 @@
+{
+  "baseline_metrics": {
+    "F1": 0.14906832298136646,
+    "ROC_AUC": 0.8169582279016905
+  },
+  "engineered_features_kept": [
+    "BMI_Category",
+    "RiskScore"
+  ],
+  "engineered_features_dropped": [
+    "TotalUnhealthyDays",
+    "IsElderly"
+  ],
+  "ablation_table": [
+    {
+      "Feature": "Baseline (raw only)",
+      "F1": 0.14906832298136646,
+      "ROC_AUC": 0.8169582279016905,
+      "F1_delta": NaN
+    },
+    {
+      "Feature": "+ BMI_Category",
+      "F1": 0.15444015444015444,
+      "ROC_AUC": 0.8147343773915477,
+      "F1_delta": 0.005371831458787973
+    },
+    {
+      "Feature": "+ RiskScore",
+      "F1": 0.15158546017014696,
+      "ROC_AUC": 0.816542558561375,
+      "F1_delta": 0.002517137188780494
+    },
+    {
+      "Feature": "+ TotalUnhealthyDays",
+      "F1": 0.145426114151681,
+      "ROC_AUC": 0.8167207583913819,
+      "F1_delta": -0.003642208829685467
+    },
+    {
+      "Feature": "+ IsElderly",
+      "F1": 0.14872192099147946,
+      "ROC_AUC": 0.8160310156283075,
+      "F1_delta": -0.0003464019898870019
+    },
+    {
+      "Feature": "+ all engineered",
+      "F1": 0.1656534954407295,
+      "ROC_AUC": 0.8130393947979458,
+      "F1_delta": 0.01658517245936303
+    }
+  ],
+  "raw_features_dropped": [
+    "CholCheck",
+    "AnyHealthcare"
+  ],
+  "raw_feature_removal_table": [
+    {
+      "Feature": "CholCheck",
+      "F1_without": 0.15752895752895754,
+      "F1_cost_of_removal": -0.008460634547591078,
+      "Own_importance": 0.0031641551953380622,
+      "Importance_cutoff (bottom 10%)": 0.007713791520690059,
+      "Drop?": true
+    },
+    {
+      "Feature": "HvyAlcoholConsump",
+      "F1_without": 0.14440993788819875,
+      "F1_cost_of_removal": 0.004658385093167711,
+      "Own_importance": 0.007526870045921741,
+      "Importance_cutoff (bottom 10%)": 0.007713791520690059,
+      "Drop?": false
+    },
+    {
+      "Feature": "AnyHealthcare",
+      "F1_without": 0.14763014763014762,
+      "F1_cost_of_removal": 0.0014381753512188455,
+      "Own_importance": 0.007713791520690059,
+      "Importance_cutoff (bottom 10%)": 0.007713791520690059,
+      "Drop?": true
+    },
+    {
+      "Feature": "NoDocbcCost",
+      "F1_without": 0.1545595054095827,
+      "F1_cost_of_removal": -0.005491182428216224,
+      "Own_importance": 0.01181777320817234,
+      "Importance_cutoff (bottom 10%)": 0.007713791520690059,
+      "Drop?": false
+    },
+    {
+      "Feature": "Fruits",
+      "F1_without": 0.15907335907335907,
+      "F1_cost_of_removal": -0.010005036091992603,
+      "Own_importance": 0.01708182588585728,
+      "Importance_cutoff (bottom 10%)": 0.007713791520690059,
+      "Drop?": false
+    },
+    {
+      "Feature": "Veggies",
+      "F1_without": 0.15027110766847404,
+      "F1_cost_of_removal": -0.0012027846871075776,
+      "Own_importance": 0.015979744200200995,
+      "Importance_cutoff (bottom 10%)": 0.007713791520690059,
+      "Drop?": false
+    }
+  ],
+  "thresholds": {
+    "F1_IMPROVEMENT_THRESHOLD": 0.002,
+    "WEAK_RAW_F1_DROP_THRESHOLD": 0.002,
+    "WEAK_RAW_IMPORTANCE_PERCENTILE": 10
+  }
+}

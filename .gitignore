@@ -1,0 +1,27 @@
+# Secrets — never commit Kaggle API credentials
+kaggle.json
+*.kaggle/
+
+# Raw / generated data (downloaded or produced by the pipeline notebooks)
+data/*.csv
+data/models/
+
+# Generated figures
+figures/*.png
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Keep placeholder/tracked files despite the rules above
+!data/README.md
